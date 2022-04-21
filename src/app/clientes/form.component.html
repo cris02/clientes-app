@@ -1,0 +1,38 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        {{ titulo }}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="create()">
+            <!-- campo para el nombre -->
+            <div class="form-group row">
+                <label for="nombre" class="form-group-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.nombre" name="nombre" />
+                </div>
+            </div>
+
+            <!-- campo para el apellido -->
+            <div class="form-group row">
+                <label for="apellido" class="form-group-label col-sm-2">Apellido</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido" />
+                </div>
+            </div>
+
+            <!-- campo para el email -->
+            <div class="form-group row">
+                <label for="email" class="form-group-label col-sm-2">Email</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.email" name="email" />
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
